@@ -1,5 +1,14 @@
 var data=[
 	{
+		name:'项目名:个人网站',
+		createdate:'上传日期 : 2016-9-1',
+		type:'类型 : PC端',
+		keyword:"关键字 : 综合",
+		introduction:'简介 : 个人网站',
+		src:'img/personal.png',
+		link:"https://github.com/m25910323/personal/blob/master/miaoxing/index.html"
+	},
+	{
 		name:'项目名 : iqiyi',
 		createdate:'上传日期 : 2016-9-1',
 		type:'类型 : PC端',
@@ -52,14 +61,6 @@ var data=[
 		introduction:'简介 : 微云首页',
 		src:'img/weiyun.png',
 		link:"https://github.com/m25910323/weiyun/blob/master/weiyun/index.html"
-	},
-	{
-		name:'项目名:个人网站',
-		createdate:'上传日期 : 2016-9-1',
-		type:'类型 : PC端',
-		keyword:"关键字 : 综合",
-		introduction:'简介 : 个人网站',
-		src:'img/personal.png'
 	}
 ];
 
