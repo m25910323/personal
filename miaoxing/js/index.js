@@ -11,10 +11,24 @@ window.onload=function(){
 			ap.style.backgroundPositionY=-15*i+'px';
 			ap.style.transition=".5s";
 			ap.onmouseover=function(){
+				clearInterval(timer3);
 				var tx=Math.random()*300-150;
 				var ty=Math.random()*80-40;
 				var tz=Math.random()*80-40;
 				this.style.transform="translateX("+tx+"px) translateY("+ty+"px) translateZ("+tz+"px) rotateX("+tx+"deg) rotateY("+ty+"deg) rotate("+tz+"deg)";
+			}
+			ap.onmouseout=function(){
+				timer3=setInterval(function(){
+					for(i=0;i<hspan.length;i++){
+						var tx=Math.random()*300-150;
+						var ty=Math.random()*80-40;
+						var tz=Math.random()*80-40;
+						hspan[i].style.transform="translateX("+tx+"px) translateY("+ty+"px) translateZ("+tz+"px) rotateX("+tx+"deg) rotateY("+ty+"deg) rotate("+tz+"deg)";
+						hspan[i].addEventListener('transitionend',function(){
+							this.style.transform="translate3d(0px,0px,0px)";
+						});
+					}
+				},3000)
 			}
 			ap.addEventListener('transitionend',function(){
 				this.style.transform="translate3d(0px,0px,0px)";
